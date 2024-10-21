@@ -1,5 +1,6 @@
 import Header from "./_comps/layout/header";
 import DefaultHome from "./_comps/layout/sections";
+import Loading from "./_comps/layout/sections/loading";
 
 export default function Home() {
   const sections = [
@@ -21,6 +22,7 @@ export default function Home() {
     <div className="container">
       <Header items={sections} />
       <DefaultHome />
+      <Loading />
     </div>
   );
 }

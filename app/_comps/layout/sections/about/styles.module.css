@@ -1,0 +1,32 @@
+.animatedBar {
+  background-color: var(--primary);
+  width: 75px;
+  height: 4px;
+  margin: 0 auto;
+  position: relative;
+}
+.animatedBar::after,
+.animatedBar::before {
+  animation: barAnimation 3s infinite linear;
+  background-color: var(--background);
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  content: "";
+}
+.animatedBar::after {
+  left: 0;
+}
+.animatedBar::before {
+  left: 8px;
+}
+
+@keyframes barAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(75px);
+  }
+}
